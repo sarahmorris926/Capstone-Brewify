@@ -8,7 +8,7 @@
   <div class="search-results">
       <ul>
           <li ng-repeat="item in results">
-                  <a ng-href="{{item.external_urls.spotify}}" target="_blank" class="result-item">{{item.name}} - {{item.genres[0]}}</div>
+                  <a ng-click="clicked()" class="result-item">{{item.name}} - {{item.genres[0]}}, {{item.genres[1]}}, {{item.genres[2]}}
           </li>
       </ul>
       

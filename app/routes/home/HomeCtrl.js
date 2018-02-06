@@ -20,6 +20,11 @@ function HomeCtrl($scope, Spotify, Artist) {
             });
             });
     };
+
+    $scope.clicked = () => {
+      console.log('you clicked');
+      
+    };
 }
 
 console.log('Welcome to Brewify!');
