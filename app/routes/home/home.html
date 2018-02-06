@@ -8,7 +8,7 @@
   <div class="search-results">
       <ul>
           <li ng-repeat="item in results">
-                  <a ng-click="clicked()" class="result-item">{{item.name}} - {{item.genres[0]}}, {{item.genres[1]}}, {{item.genres[2]}}
+                  <a ng-click="clicked()" class="result-item">{{item.name}} - {{item.genres.join(', ')}}</a>
           </li>
       </ul>
       
