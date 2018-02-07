@@ -25,7 +25,10 @@ function HomeCtrl($scope, Spotify, Artist, Pairings) {
 
   $scope.clicked = (genres) => {
     console.log("you clicked", genres);
-    
+    for (let i = 0; i < genres.length; i++) {
+      if ()
+    };
+
 
   };
 }
