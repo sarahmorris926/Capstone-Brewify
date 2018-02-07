@@ -23,9 +23,10 @@ function HomeCtrl($scope, Spotify, Artist, Pairings) {
     $scope.beerPairings = beers.pairings;
   });
 
-  $scope.clicked = () => {
-    console.log("you clicked");
+  $scope.clicked = (genres) => {
+    console.log("you clicked", genres);
     
+
   };
 }
 
