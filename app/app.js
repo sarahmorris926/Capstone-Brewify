@@ -6,9 +6,10 @@ const angular_spotify = require("angular-spotify");
 angular
   .module("BrewifyApp", ["ngRoute", "spotify"])
   .config($routeProvider => {
-    $routeProvider.when("/", {
-      templateUrl: "app/routes/home/home.html",
-      controller: "HomeCtrl"
+    $routeProvider
+    .when("/", {
+      templateUrl: "app/routes/artistSearch/ArtistSearch.html",
+      controller: "ArtistSearchCtrl"
     });
   })
   .config(SpotifyProvider => {
