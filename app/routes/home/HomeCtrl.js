@@ -1,8 +1,8 @@
 "use strict";
 const angular = require("angular");
 angular.module("BrewifyApp").controller("HomeCtrl", HomeCtrl);
-HomeCtrl.$inject = ["$scope", "Spotify", "Artist"];
-function HomeCtrl($scope, Spotify, Artist) {
+HomeCtrl.$inject = ["$scope", "Spotify", "Artist", "Pairings"];
+function HomeCtrl($scope, Spotify, Artist, Pairings) {
   $scope.login = () => {
     Spotify.login();
   };
@@ -16,8 +16,18 @@ function HomeCtrl($scope, Spotify, Artist) {
     });
   };
 
-  $scope.clicked = () => {
-    console.log("you clicked");
+  $scope.clicked = genres => {
+    console.log("you clicked", genres);
+    Pairings.getPairings().then(beers => {
+      console.log("beers stuff", beers);
+      for (let i = 0; i < genres.length; i++) {
+        let currentGenre = genres[i];
+        if (beers[currentGenre] !== undefined) {
+          console.log(beers[currentGenre]);
+          break;
+        }
+      }
+    });
   };
 }
 
