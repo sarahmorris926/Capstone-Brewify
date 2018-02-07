@@ -16,20 +16,18 @@ function HomeCtrl($scope, Spotify, Artist, Pairings) {
     });
   };
 
-  Pairings.getPairings()
-  .then( (beers) => {
-    console.log('beers', beers);
-    
-    $scope.beerPairings = beers.pairings;
-  });
-
-  $scope.clicked = (genres) => {
+  $scope.clicked = genres => {
     console.log("you clicked", genres);
-    for (let i = 0; i < genres.length; i++) {
-      if ()
-    };
-
-
+    Pairings.getPairings().then(beers => {
+      console.log("beers stuff", beers);
+      for (let i = 0; i < genres.length; i++) {
+        let currentGenre = genres[i];
+        if (beers[currentGenre] !== undefined) {
+          console.log(beers[currentGenre]);
+          break;
+        }
+      }
+    });
   };
 }
 

@@ -10,7 +10,7 @@ function PairingsFactory($q, $http) {
       $http
         .get("../../pairings.json")
         .then(beers => {
-          resolve(beers);
+          resolve(beers.data.pairings);
         })
         .catch(error => {
           reject(error);

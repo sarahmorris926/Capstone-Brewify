@@ -1,11 +1,11 @@
 {
   "pairings": {
-    "pop": "beer",
+    "pop": "ipa",
     "rap": "beer",
-    "dance pop": "beer",
+    "dance pop": "pale ale",
     "pop rap": "beer",
     "post teen pop": "beer",
-    "hip hop": "beer",
+    "hip hop": "stout",
     "rock": "beer",
     "trap music": "beer",
     "modern rock": "beer",
@@ -38,7 +38,7 @@
     "canadian pop": "beer",
     "lounge": "beer",
     "pop christmas": "beer",
-    "boy band": "beer",
+    "boy band": "pale ale",
     "dance rock": "beer",
     "disco": "beer",
     "europop": "beer",
