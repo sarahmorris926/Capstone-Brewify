@@ -1,8 +1,10 @@
 "use strict";
 const angular = require("angular");
-angular.module("BrewifyApp").controller("HomeCtrl", HomeCtrl);
-HomeCtrl.$inject = ["$scope", "Spotify", "Artist", "Pairings"];
-function HomeCtrl($scope, Spotify, Artist, Pairings) {
+const ngRoute = require("angular-route");
+
+angular.module("BrewifyApp").controller("ArtistSearchCtrl", ArtistSearchCtrl);
+ArtistSearchCtrl.$inject = ["$scope", "Spotify", "Artist", "Pairings"];
+function ArtistSearchCtrl($scope, Spotify, Artist, Pairings) {
   $scope.login = () => {
     Spotify.login();
   };
@@ -17,16 +19,18 @@ function HomeCtrl($scope, Spotify, Artist, Pairings) {
   };
 
   $scope.clicked = genres => {
-    console.log("you clicked", genres);
+    console.log('you clicked', genres);
     Pairings.getPairings().then(beers => {
-      console.log("beers stuff", beers);
+      console.log('beers stuff', beers);
       for (let i = 0; i < genres.length; i++) {
         let currentGenre = genres[i];
         if (beers[currentGenre] !== undefined) {
           console.log(beers[currentGenre]);
+          $scope.beer = beers[currentGenre];
           break;
         }
       }
+      
     });
   };
 }

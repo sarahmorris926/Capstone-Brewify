@@ -1,4 +1,4 @@
-<div class="home">
+<div class="artistSearch">
     <button ng-click="login()">Login</button>
 
 
@@ -8,9 +8,11 @@
     <div class="search-results">
         <ul>
             <li ng-repeat="item in results">
-                <a ng-click="clicked(item.genres)" class="result-item">{{item.name}} - {{item.genres.join(', ')}}</a>
+                <a ng-click="clicked(item.genres)" class="result-item">{{item.name}}</a>
             </li>
         </ul>
 
     </div>
 </div>
+
+<div ng-show="beer"> {{beer}} </div>
