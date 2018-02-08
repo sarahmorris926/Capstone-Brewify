@@ -8,9 +8,9 @@ function PairingsFactory($q, $http) {
   let getPairings = () => {
     return $q((resolve, reject) => {
       $http
-        .get("../../pairings.json")
+        .get("https://brewify-capstone.firebaseio.com/pairings.json")
         .then(beers => {
-          resolve(beers.data.pairings);
+          resolve(beers.data);
         })
         .catch(error => {
           reject(error);
