@@ -8,7 +8,7 @@ angular
   .config($routeProvider => {
     $routeProvider
     .when("/", {
-      templateUrl: "app/routes/artistSearch/ArtistSearch.html",
+      templateUrl: "app/partials/ArtistSearch.html",
       controller: "ArtistSearchCtrl"
     });
   })
