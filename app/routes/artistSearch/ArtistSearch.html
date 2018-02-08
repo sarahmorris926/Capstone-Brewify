@@ -1,18 +1,21 @@
-<div class="artistSearch">
-    <button ng-click="login()">Login</button>
+<div class="container">
+    <div class="artistSearch">
+        <button ng-click="login()">Login</button>
 
 
-    <input type="text" ng-model="searchTerm">
-    <button ng-click="search()">Search!</button>
+        <input type="text" ng-model="searchTerm">
+        <button ng-click="search()">Search!</button>
 
-    <div class="search-results">
-        <ul>
-            <li ng-repeat="item in results">
-                <a ng-click="clicked(item.genres)" class="result-item">{{item.name}}</a>
-            </li>
-        </ul>
+        <div class="search-results">
+            <ul>
+                <li ng-repeat="item in results">
+                    <a ng-click="clicked(item.genres)" class="result-item">{{item.name}}</a>
+                </li>
+            </ul>
 
+        </div>
     </div>
-</div>
 
-<div ng-show="beer"> {{beer}} </div>
+    <div ng-show="beer"> {{beer}} </div>
+
+</div>
