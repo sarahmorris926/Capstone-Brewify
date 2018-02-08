@@ -1,3 +1,5 @@
+// No longer being used because we are searching artists instead
+
 "use strict";
 const angular = require("angular");
 
