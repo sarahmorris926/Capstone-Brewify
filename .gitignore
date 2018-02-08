@@ -1,4 +1,5 @@
 node_modules
 dist/
 app/values/brewerydbCreds.js
-.sass_cache
+.sass-cache
+
