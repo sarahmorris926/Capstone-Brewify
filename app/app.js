@@ -9,7 +9,7 @@ angular
     $routeProvider
     .when("/", {
       templateUrl: "app/partials/ArtistSearch.html",
-      controller: "ArtistSearchCtrl1",
+      controller: "ArtistSearchCtrl",
     });
   })
   .config(SpotifyProvider => {
