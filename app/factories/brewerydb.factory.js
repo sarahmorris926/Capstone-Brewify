@@ -8,7 +8,7 @@ function BreweryDBFactory($q, $http, brewerydbCreds) {
   let getBeerStyles = () => {
     return $q((resolve, reject) => {
       $http
-        .get(`http://api.brewerydb.com/v2/styles/?key=${brewerydbCreds.apiKey}`)
+        .get(`http://api.brewerydb.com/v2/styles/?key=603678d034663dbe732e79930c90a6e7`)
         .then(beerStyles => {
           resolve (beerStyles);
         })

@@ -3,8 +3,8 @@ const angular = require("angular");
 const ngRoute = require("angular-route");
 
 angular.module("BrewifyApp").controller("ArtistSearchCtrl", ArtistSearchCtrl);
-ArtistSearchCtrl.$inject = ["$scope", "Spotify", "Artist", "Pairings"];
-function ArtistSearchCtrl($scope, Spotify, Artist, Pairings) {
+ArtistSearchCtrl.$inject = ["$scope", "Spotify", "Artist", "Pairings", "BreweryDB"];
+function ArtistSearchCtrl($scope, Spotify, Artist, Pairings, BreweryDB) {
   $scope.login = () => {
     Spotify.login();
   };
@@ -19,11 +19,11 @@ function ArtistSearchCtrl($scope, Spotify, Artist, Pairings) {
   };
 
   $scope.clicked = genres => {
-    Pairings.getPairings().then(beers => {
+    Pairings.getPairings().then(beerName => {
       for (let i = 0; i < genres.length; i++) {
         let currentGenre = genres[i];
-        if (beers[currentGenre] !== undefined) {
-          $scope.beer = beers[currentGenre];
+        if (beerName[currentGenre] !== undefined) {
+          $scope.beer = beerName[currentGenre];
           break;
         }
       }

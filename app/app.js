@@ -10,6 +10,10 @@ angular
     .when("/", {
       templateUrl: "app/partials/ArtistSearch.html",
       controller: "ArtistSearchCtrl",
+    })
+    .when("/pairings", {
+      templateUrl: "app/partials/BeerInfo.html",
+      controller: "BreweryDBCtrl"
     });
   })
   .config(SpotifyProvider => {

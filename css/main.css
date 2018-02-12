@@ -1,4 +1,13 @@
 body {
   background-color: #ecebe8; }
 
+.logo {
+  display: block;
+  overflow: hidden;
+  float: left;
+  height: 100px;
+  padding: 0;
+  width: 100px;
+  background: url("images/brewify.png") no-repeat; }
+
 /*# sourceMappingURL=main.css.map */
