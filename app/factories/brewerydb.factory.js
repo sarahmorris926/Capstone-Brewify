@@ -16,7 +16,7 @@ angular.module("BrewifyApp").factory("BreweryDB", function($q, $http, brewerydbC
         });
     });
   };
-  return { getBeerStyles };
+  return {getBeerStyles};
 });
 
 
