@@ -8,9 +8,9 @@ function BreweryDBFactory($q, $http, brewerydbCreds) {
   let getBeerStyles = () => {
     return $q((resolve, reject) => {
       $http
-        .get(`http://api.brewerydb.com/v2/styles/?key=${brewerydbCreds.apiKey}`)
-        .then(beerStyles => {
-          resolve (beerStyles);
+        .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/styles/?key=${brewerydbCreds.apiKey}`)
+        .then(beers => {
+          resolve (beers.data);
         })
         .catch(error => {
           reject (error);

@@ -14,4 +14,10 @@ body {
   display: flex;
   justify-content: center; }
 
+.ngShowBeer {
+  color: red; }
+
+.resultItem {
+  color: red; }
+
 /*# sourceMappingURL=main.css.map */

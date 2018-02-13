@@ -9,13 +9,13 @@
         <div class="search-results">
             <ul>
                 <li ng-repeat="item in results">
-                    <a ng-click="clicked(item.genres)" class="result-item">{{item.name}}</a>
+                    <a ng-click="clicked(item.genres)" class="resultItem">{{item.name}}</a>
                 </li>
             </ul>
 
         </div>
     </div>
 
-    <div ng-show="beer"> {{beer}} </div>
+    <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
 
 </div>

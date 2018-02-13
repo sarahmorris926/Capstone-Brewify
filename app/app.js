@@ -13,7 +13,7 @@ angular
     })
     .when("/beersearch", {
       templateUrl: "app/partials/BeerSearch.html",
-      controller: "PairingsCtrl"
+      controller: "BreweryDBCtrl"
     })
     .otherwise("/");
   })

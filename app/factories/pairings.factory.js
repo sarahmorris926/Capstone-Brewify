@@ -2,9 +2,9 @@
 
 const angular = require("angular");
 
-angular.module("BrewifyApp").factory("Pairings", PairingsFactory);
-PairingsFactory.$inject = ["$q", "$http"];
-function PairingsFactory($q, $http) {
+angular.module("BrewifyApp").factory("Pairings", Pairings);
+Pairings.$inject = ["$q", "$http"];
+function Pairings($q, $http) {
   let getPairings = () => {
     return $q((resolve, reject) => {
       $http
