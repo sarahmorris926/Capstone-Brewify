@@ -10,4 +10,8 @@ body {
   width: 100px;
   background: url("images/brewify.png") no-repeat; }
 
+.container {
+  display: flex;
+  justify-content: center; }
+
 /*# sourceMappingURL=main.css.map */
