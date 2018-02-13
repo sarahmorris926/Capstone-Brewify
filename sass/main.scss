@@ -1,5 +1,5 @@
 body {
-    background-color: #ecebe8;
+    background-color: gray;
 }
 
 
@@ -13,3 +13,17 @@ body {
     width: 100px;
     background: url('images/brewify.png') no-repeat;
 }
+
+.container {
+    display: flex;
+    justify-content: center; 
+}
+
+.ngShowBeer {
+   color: red;
+}
+
+.resultItem {
+    color: red;
+}
+

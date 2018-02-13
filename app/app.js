@@ -3,18 +3,18 @@ const angular = require("angular");
 const ngRoute = require("angular-route");
 const angular_spotify = require("angular-spotify");
 
-angular
-  .module("BrewifyApp", ["ngRoute", "spotify"])
+angular.module("BrewifyApp", ["ngRoute", "spotify"])
   .config($routeProvider => {
     $routeProvider
     .when("/", {
       templateUrl: "app/partials/ArtistSearch.html",
       controller: "ArtistSearchCtrl",
     })
-    .when("/pairings", {
-      templateUrl: "app/partials/BeerInfo.html",
+    .when("/beersearch", {
+      templateUrl: "app/partials/BeerSearch.html",
       controller: "BreweryDBCtrl"
-    });
+    })
+    .otherwise("/");
   })
   .config(SpotifyProvider => {
     SpotifyProvider.setClientId("f344405cfc06454d9d1f452c2f32b32d");

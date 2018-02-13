@@ -1,35 +1,34 @@
 "use strict";
 const angular = require("angular");
 const ngRoute = require("angular-route");
+const angular_spotify = require("angular-spotify");
 
-angular.module("BrewifyApp").controller("ArtistSearchCtrl", ArtistSearchCtrl);
-ArtistSearchCtrl.$inject = ["$scope", "Spotify", "Artist", "Pairings", "BreweryDB"];
-function ArtistSearchCtrl($scope, Spotify, Artist, Pairings, BreweryDB) {
-  $scope.login = () => {
-    Spotify.login();
-  };
+angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spotify, Artist, Pairings, BreweryDB) {
+    $scope.login = () => {
+      Spotify.login();
+    };
 
-  $scope.search = () => {
-    Spotify.search($scope.searchTerm, "artist").then(function(data) {
-      $scope.results = data.data.artists.items;
-      $scope.results = $scope.results.map(artist => {
-        return new Artist(artist);
+    $scope.search = () => {
+      Spotify.search($scope.searchTerm, "artist").then(function(data) {
+        $scope.results = data.data.artists.items;
+        $scope.results = $scope.results.map(artist => {
+          return new Artist(artist);
+        });
       });
-    });
-  };
+    };
 
-  $scope.clicked = genres => {
-    Pairings.getPairings().then(beerName => {
-      for (let i = 0; i < genres.length; i++) {
-        let currentGenre = genres[i];
-        if (beerName[currentGenre] !== undefined) {
-          $scope.beer = beerName[currentGenre];
-          break;
+    $scope.clicked = genres => {
+      Pairings.getPairings().then(beerName => {
+        for (let i = 0; i < genres.length; i++) {
+          let currentGenre = genres[i];
+          if (beerName[currentGenre] !== undefined) {
+            $scope.beer = beerName[currentGenre];
+            break;
+          }
         }
-      }
-    });
-  };
-}
+      });
+    };
+  });
 
 console.log("Welcome to Brewify!");
 console.log(
