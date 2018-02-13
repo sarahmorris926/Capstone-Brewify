@@ -3,8 +3,7 @@ const angular = require("angular");
 const ngRoute = require("angular-route");
 const angular_spotify = require("angular-spotify");
 
-angular
-  .module("BrewifyApp", ["ngRoute", "spotify"])
+angular.module("BrewifyApp", ["ngRoute", "spotify"])
   .config($routeProvider => {
     $routeProvider
     .when("/", {

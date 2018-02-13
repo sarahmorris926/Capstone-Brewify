@@ -2,9 +2,8 @@
 
 const angular = require("angular");
 
-angular.module("BrewifyApp").factory("BreweryDB", BreweryDBFactory);
-BreweryDBFactory.$inject = ["$q", "$http", "brewerydbCreds"];
-function BreweryDBFactory($q, $http, brewerydbCreds) {
+angular.module("BrewifyApp").factory("BreweryDB", function($q, $http, brewerydbCreds) {
+
   let getBeerStyles = () => {
     return $q((resolve, reject) => {
       $http
@@ -18,4 +17,6 @@ function BreweryDBFactory($q, $http, brewerydbCreds) {
     });
   };
   return { getBeerStyles };
-}
+});
+
+
