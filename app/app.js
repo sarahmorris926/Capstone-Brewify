@@ -11,10 +11,11 @@ angular
       templateUrl: "app/partials/ArtistSearch.html",
       controller: "ArtistSearchCtrl",
     })
-    .when("/pairings", {
-      templateUrl: "app/partials/BeerInfo.html",
-      controller: "BreweryDBCtrl"
-    });
+    .when("/beersearch", {
+      templateUrl: "app/partials/BeerSearch.html",
+      controller: "PairingsCtrl"
+    })
+    .otherwise("/");
   })
   .config(SpotifyProvider => {
     SpotifyProvider.setClientId("f344405cfc06454d9d1f452c2f32b32d");

@@ -10,12 +10,12 @@ function PairingsFactory($q, $http) {
       $http
         .get("https://brewify-capstone.firebaseio.com/pairings.json")
         .then(beers => {
-          resolve (beers.data);
+          resolve(beers.data);
         })
         .catch(error => {
-          reject (error);
+          reject(error);
         });
     });
-    };
+  };
   return { getPairings };
 }
