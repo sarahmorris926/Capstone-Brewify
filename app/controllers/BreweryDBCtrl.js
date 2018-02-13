@@ -2,7 +2,9 @@
 const angular = require("angular");
 const ngRoute = require("angular-route");
 
-angular.module("BrewifyApp").controller("BreweryDBCtrl", function($scope, BreweryDB, Spotify, Pairings) {
+angular
+  .module("BrewifyApp")
+  .controller("BreweryDBCtrl", function($scope, BreweryDB, Spotify, Pairings) {
     $scope.login = () => {
       Spotify.login();
     };
@@ -14,18 +16,28 @@ angular.module("BrewifyApp").controller("BreweryDBCtrl", function($scope, Brewer
         console.log("beerNames", $scope.beerNames);
       });
 
-      $scope.clickedBeer = genres => {
-        Pairings.getPairings().then(beerName => {
-          for (let i = 0; i < genres.length; i++) {
-            let currentGenre = genres[i];
-            if (beerName[currentGenre] !== undefined) {
-              $scope.beer = beerName[currentGenre];
-              break;
-            }
+    $scope.clickedBeer = beerStyles => {
+      console.log("beer styles", beerStyles); // this is the string you clicked on
+      Pairings.getPairings().then(beerName => {
+        // console.log("beername?", beerName); // object from fb
+        // let objBeername = Object.values(beerName);
+        // console.log(objBeername);
+
+        for (var key in beerName) {
+          console.log("key", key);
+          if (beerStyles === beerName[key]) {
+            $scope.genre = key;
           }
-        });
-      };
+        }
 
 
-
+        // for (let i = 0; i < beerStyles.length; i++) {
+        //   let currentGenre = beerStyles[i];
+        //   if (beerName[currentGenre] !== undefined) {
+        //     $scope.genre = beerName[currentGenre];
+        //     break;
+        //   }
+        // }
+      });
+    };
   });
