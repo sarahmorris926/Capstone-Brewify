@@ -17,7 +17,7 @@ angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spo
       });
     };
 
-    $scope.clicked = genres => {
+    $scope.clickedArtist = genres => {
       Pairings.getPairings().then(beerName => {
         for (let i = 0; i < genres.length; i++) {
           let currentGenre = genres[i];

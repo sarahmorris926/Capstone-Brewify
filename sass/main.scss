@@ -11,7 +11,7 @@ body {
     height: 100px;
     padding: 0;
     width: 100px;
-    background: url('images/brewify.png') no-repeat;
+    background-image: url(../images/brewify.pdf);
 }
 
 .container {
@@ -20,10 +20,16 @@ body {
 }
 
 .ngShowBeer {
+<<<<<<< Updated upstream
    color: red;
 }
 
 .resultItem {
     color: red;
 }
+=======
+   color: blue;
+}
+
+>>>>>>> Stashed changes
 
