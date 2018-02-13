@@ -9,7 +9,7 @@ angular.module("BrewifyApp").factory("BreweryDB", function($q, $http, brewerydbC
       $http
         .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/styles/?key=${brewerydbCreds.apiKey}`)
         .then(beers => {
-          resolve (beers.data);
+          resolve (beers);
         })
         .catch(error => {
           reject (error);

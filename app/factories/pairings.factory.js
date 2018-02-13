@@ -8,8 +8,8 @@ angular.module("BrewifyApp").factory("Pairings", function($q, $http) {
     return $q((resolve, reject) => {
       $http
         .get("https://brewify-capstone.firebaseio.com/pairings.json")
-        .then(beers => {
-          resolve(beers.data);
+        .then(genrePairings => {
+          resolve(genrePairings.data);
         })
         .catch(error => {
           reject(error);
