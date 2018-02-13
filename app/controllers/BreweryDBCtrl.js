@@ -2,17 +2,6 @@
 const angular = require("angular");
 const ngRoute = require("angular-route");
 
-<<<<<<< Updated upstream
-angular.module("BrewifyApp").controller("BreweryDBCtrl", function($scope, BreweryDB) {
-  
-    $scope.beerData = beerInfo =>
-      BreweryDB.getBeerStyles().then(beerNames => {
-        console.log("beerInfo", beerNames);
-      });
-
-});
-
-=======
 angular.module("BrewifyApp").controller("BreweryDBCtrl", function($scope, BreweryDB, Spotify, Pairings) {
     $scope.login = () => {
       Spotify.login();
@@ -39,4 +28,3 @@ angular.module("BrewifyApp").controller("BreweryDBCtrl", function($scope, Brewer
 
 
   });
->>>>>>> Stashed changes
