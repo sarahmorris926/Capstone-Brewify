@@ -15,16 +15,17 @@ angular.module("BrewifyApp").controller("BreweryDBCtrl", function($scope, Brewer
       });
 
       $scope.clickedBeer = genres => {
-        Pairings.getPairings().then(genreName => {
+        Pairings.getPairings().then(beerName => {
           for (let i = 0; i < genres.length; i++) {
             let currentGenre = genres[i];
-            if (genreName[currentGenre] !== undefined) {
-              $scope.genre = genreName[currentGenre];
+            if (beerName[currentGenre] !== undefined) {
+              $scope.beer = beerName[currentGenre];
               break;
             }
           }
         });
       };
+
 
 
   });
