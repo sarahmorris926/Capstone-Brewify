@@ -17,9 +17,41 @@ angular.module("BrewifyApp").factory("BreweryDB", function($q, $http, brewerydbC
     });
   };
   let getBeerNames = () => {
-    return $q((resolve, reject) => {
+    return $q.all((resolve, reject) => {
       $http
-      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}`)
+      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}&p=1`)
+      .then(beerNames => {
+        resolve (beerNames);
+      })
+      .catch(error => {
+        reject(error);
+      });
+      $http
+      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}&p=2`)
+      .then(beerNames => {
+        resolve (beerNames);
+      })
+      .catch(error => {
+        reject(error);
+      });
+      $http
+      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}&p=3`)
+      .then(beerNames => {
+        resolve (beerNames);
+      })
+      .catch(error => {
+        reject(error);
+      });
+      $http
+      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}&p=4`)
+      .then(beerNames => {
+        resolve (beerNames);
+      })
+      .catch(error => {
+        reject(error);
+      });
+      $http
+      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}&p=5`)
       .then(beerNames => {
         resolve (beerNames);
       })
