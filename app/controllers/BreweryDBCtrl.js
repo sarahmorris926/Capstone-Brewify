@@ -24,7 +24,6 @@ angular
         // console.log(objBeername);
 
         for (var key in beerName) {
-          console.log("key", key);
           if (beerStyles === beerName[key]) {
             $scope.genre = key;
           }
