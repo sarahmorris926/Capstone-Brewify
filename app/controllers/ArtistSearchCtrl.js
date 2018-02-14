@@ -3,7 +3,7 @@ const angular = require("angular");
 const ngRoute = require("angular-route");
 const angular_spotify = require("angular-spotify");
 
-angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope,Spotify,Artist,Pairings,BreweryDB) {
+angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spotify, Artist, Pairings, BreweryDB) {
     $scope.login = () => {
       Spotify.login();
     };
@@ -29,11 +29,12 @@ angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope,Spot
       });
     };
 
-      $scope.clickedBeerStyle = () => {
-        BreweryDB.getBeerNames().then(beerName => {
-          console.log("beerName", beerName.data.data[0].name);
-          $scope.beerName = beerName.data.data[0].name;
-        });
+    $scope.clickedBeerStyle = () => {
+      BreweryDB.getBeerNames().then(beerName => {
+        console.log("beerName", beerName.data.data);
+        $scope.beerArr = beerName.data.data;
+
+      });
     };
   });
 
