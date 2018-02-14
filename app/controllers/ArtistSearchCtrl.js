@@ -40,5 +40,5 @@ angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spo
 
 console.log("Welcome to Brewify!");
 console.log(
-  "Login first, then search for an artist to get a link to their Spotify page!"
+  "Login first, then search for an artist. Click the 'Play' button to see the artist's Spotify page, or click on their name to see the beer pairings."
 );
