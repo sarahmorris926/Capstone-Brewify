@@ -1,5 +1,19 @@
-body {
+html, body {
     background-color: gray;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+
+}
+
+
+.title {
+    color: #84bd00;
 }
 
 
@@ -16,11 +30,29 @@ body {
 
 .container {
     display: flex;
-    justify-content: center; 
+    justify-content: space-around;
+
 }
 
-.ngShowBeer {
-   color: blue;
+.ngShowBeer, .ngShowGenre {
+   color: #ecebe8;
 }
+
+.searchResults {
+    overflow: scroll;
+    width: 300px;
+    height: 600px;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
 
 

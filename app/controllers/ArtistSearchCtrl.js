@@ -18,15 +18,22 @@ angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope,Spot
     };
 
     $scope.clickedArtist = genres => {
-      Pairings.getPairings().then(beerName => {
+      Pairings.getPairings().then(beerStyleName => {
         for (let i = 0; i < genres.length; i++) {
           let currentGenre = genres[i];
-          if (beerName[currentGenre] !== undefined) {
-            $scope.beer = beerName[currentGenre];
+          if (beerStyleName[currentGenre] !== undefined) {
+            $scope.beer = beerStyleName[currentGenre];
             break;
           }
         }
       });
+    };
+
+      $scope.clickedBeerStyle = () => {
+        BreweryDB.getBeerNames().then(beerName => {
+          console.log("beerName", beerName.data.data[0].name);
+          $scope.beerName = beerName.data.data[0].name;
+        });
     };
   });
 
