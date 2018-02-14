@@ -21,7 +21,7 @@
         <h3>Beer Style: </h3>
         <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
         <button ng-click="clickedBeerStyle()">Get Beers!</button>
-        <div ng-repeat="item in beerArr" ng-if="item.style.name === beer">{{item.name}}</div>
+        <div ng-repeat="item in beerArr" ng-if="item.style.name === beer">{{item.nameDisplay}}</div>
     </div> <!-- /pairings -->
     
 </div> <!-- /container -->
