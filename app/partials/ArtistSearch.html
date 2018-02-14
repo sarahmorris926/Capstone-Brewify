@@ -1,7 +1,7 @@
 <div class="container">
     <div class="artistSearch">
         <h1>Artist Search</h1>
-        <button ng-click="login()">Login</button>
+        <button ng-click="login()">Spotify Login</button>
 
 
         <input type="text" ng-model="searchTerm">
@@ -10,13 +10,17 @@
         <div class="searchResults">
             <ul>
                 <li ng-repeat="item in results">
-                    <a ng-click="clickedArtist(item.genres)" id="clickedArtist">{{item.name}}</a>
+                    <a ng-click="clickedArtist(item.genres)">{{item.name}}</a>
                 </li>
             </ul>
 
         </div>
-    </div>
+    </div> <!-- /artistSearch -->
 
-    <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
-
-</div>
+    <div class="pairings">
+        <h3>Beer Style: </h3>
+        <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
+    </div> <!-- /pairings -->
+    
+    
+</div> <!-- /container -->

@@ -25,8 +25,14 @@
 
 </head>
 
-<body ng-app="BrewifyApp" ng-view>
+<body ng-app="BrewifyApp">
+  <div id="wrapper">
 
+  <div ng-include=" 'app/partials/Nav.html' "></div>
+  <div ng-view></div>
+  <div ng-include=" 'app/partials/Footer.html' "></div>
+
+</div> <!-- /wrapper -->
 
 </body>
 
