@@ -29,15 +29,6 @@ angular
             $scope.genre = key;
           }
         }
-
-
-        // for (let i = 0; i < beerStyles.length; i++) {
-        //   let currentGenre = beerStyles[i];
-        //   if (beerName[currentGenre] !== undefined) {
-        //     $scope.genre = beerName[currentGenre];
-        //     break;
-        //   }
-        // }
       });
     };
   });
