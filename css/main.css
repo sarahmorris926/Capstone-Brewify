@@ -44,4 +44,7 @@ body {
 .footer span {
   color: #e25555; }
 
+.searchResults li {
+  cursor: pointer; }
+
 /*# sourceMappingURL=main.css.map */
