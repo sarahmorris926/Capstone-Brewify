@@ -8,7 +8,7 @@
         <div class="searchResults">
             <ul>
                 <li ng-repeat="item in beerNames | filter: searchTerm">
-                    <a ng-click="clickedBeer(item)" class="result-item">{{item}}</a>
+                    <a ng-click="clickedBeer(item)" class="result-item">{{item.name}}</a>
                 </li>
             </ul>
 
