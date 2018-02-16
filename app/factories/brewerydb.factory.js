@@ -16,19 +16,19 @@ angular.module("BrewifyApp").factory("BreweryDB", function($q, $http, brewerydbC
         });
     });
   };
-  let getBeerNames = () => {
+  let getBeerNames = (pageNumber, styleIdNumber) => {
     return $q((resolve, reject) => {
       $http
-      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}`)
-      .then(beerNames => {
-        resolve (beerNames);
+      .get(`https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${brewerydbCreds.apiKey}&p=${pageNumber}&styleId=${styleIdNumber}`)
+      .then(beers => {
+        resolve (beers);
       })
       .catch(error => {
         reject(error);
       });
-    });
+    }); 
   };
+  
   return {getBeerStyles, getBeerNames};
 });
-
 

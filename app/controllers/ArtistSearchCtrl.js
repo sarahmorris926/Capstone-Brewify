@@ -3,7 +3,7 @@ const angular = require("angular");
 const ngRoute = require("angular-route");
 const angular_spotify = require("angular-spotify");
 
-angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spotify, Artist, Pairings, BreweryDB) {
+angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spotify, Artist, Pairings, BreweryDB, $q) {
     $scope.login = () => {
       Spotify.login();
     };
@@ -30,11 +30,33 @@ angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spo
     };
 
     $scope.clickedBeerStyle = () => {
-      BreweryDB.getBeerNames().then(beerName => {
-        console.log("beerName", beerName.data.data);
-        $scope.beerArr = beerName.data.data;
+      $scope.beerArr = [];
+      Pairings.getStyleIdNumber($scope.beer).then(data => {
+        // console.log("scope.beer", data.data);
+        let styleId = Object.values(data.data)[0].id;
+              let promArr = [];
+              for (let i = 0; i < 10; i++) {
+                promArr.push(BreweryDB.getBeerNames(i+1, styleId));
+              }
+              $q.all(promArr).then(beerName => {
+                beerName.forEach(beerArr => {
+                  console.log(beerArr.data.data);
+                  $scope.beerArr = $scope.beerArr.concat(beerArr.data.data);
+                });
+              });
+      }
 
-      });
+      );
+
+
+
+  
+
+      // BreweryDB.getBeerNames().then(beerName => {
+      //   console.log("beerName", beerName.data.data);
+      //   $scope.beerArr = beerName.data.data;
+        
+      // });
     };
   });
 
