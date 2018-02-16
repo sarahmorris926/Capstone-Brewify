@@ -33,7 +33,7 @@ angular.module("BrewifyApp").factory("Pairings", function($q, $http) {
   let getStyleIdNumber = () => {
     return $q((resolve, reject) => {
       $http
-      .get(`https://brewify-capstone.firebaseio.com/-L5QR8SMSzYoIPzvDNHH.json?orderBy="$value"&equalTo="string"`) //order by & equal to in firebase
+      .get(`https://brewify-capstone.firebaseio.com/-L5QR8SMSzYoIPzvDNHH.json?orderBy="id"&equalTo="name"`) //order by & equal to in firebase
       .then(styleIdNumber => {
         resolve(styleIdNumber);
       })
