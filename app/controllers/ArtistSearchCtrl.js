@@ -30,16 +30,25 @@ angular.module("BrewifyApp").controller("ArtistSearchCtrl", function($scope, Spo
     };
 
     $scope.clickedBeerStyle = () => {
-      let promArr = [];
-      for (let i = 0; i < 10; i++) {
-        promArr.push(BreweryDB.getBeerNames(i+1));
+      $scope.beerArr = [];
+      Pairings.getStyleIdNumber($scope.beer).then(data => {
+        // console.log("scope.beer", data.data);
+        let styleId = Object.values(data.data)[0].id;
+              let promArr = [];
+              for (let i = 0; i < 10; i++) {
+                promArr.push(BreweryDB.getBeerNames(i+1, styleId));
+              }
+              $q.all(promArr).then(beerName => {
+                beerName.forEach(beerArr => {
+                  console.log(beerArr.data.data);
+                  $scope.beerArr = $scope.beerArr.concat(beerArr.data.data);
+                });
+              });
       }
-      $q.all(promArr).then(beerName => {
-        beerName.forEach(beerArr => {
-          console.log(beerArr.data.data);
-          
-        });
-      });
+
+      );
+
+
 
   
 

@@ -31,9 +31,9 @@ angular
     $scope.clickedBeer = beerStyles => {
       // console.log("beer styles", beerStyles); // this is the string you clicked on
       Pairings.getPairings().then(beerName => {
-        // console.log("beername?", beerName); // object from fb
-        // let objBeername = Object.values(beerName);
-        // console.log(objBeername);
+        console.log("beername?", beerName); // object from fb
+      
+
 
         for (var key in beerName) {
           if (beerStyles === beerName[key]) {
