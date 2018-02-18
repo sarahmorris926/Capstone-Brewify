@@ -18,23 +18,14 @@ angular
           beerInfo.name = beer.name;
           return beerInfo;
           });
-        // Pairings.addStyleIds($scope.beerNames).then(styleIds => {
-        //   console.log(styleIds);
-        //   }
-        // );
 
         console.log("beerNames", $scope.beerNames);
       });
 
 
 
-    $scope.clickedBeer = beerStyles => {
-      // console.log("beer styles", beerStyles); // this is the string you clicked on
-      Pairings.getPairings().then(beerName => {
-        console.log("beername?", beerName); // object from fb
-      
-
-
+    $scope.clickedBeer = beerStyles => { // beerStyles is the style string that the user clicks on
+      Pairings.getPairings().then(beerName => { // beerName is the object from Firebase that has {Genre: Beer Style}
         for (var key in beerName) {
           if (beerStyles === beerName[key]) {
             $scope.genre = key;
