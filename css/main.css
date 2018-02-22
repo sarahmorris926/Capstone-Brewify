@@ -47,6 +47,13 @@ body {
 .searchResults li {
   cursor: pointer; }
 
+.searchInput {
+  width: 600px;
+  align-items: center; }
+
+.artistSearch button {
+  align-content: center; }
+
 .footer a:link {
   text-decoration: none;
   color: red; }
