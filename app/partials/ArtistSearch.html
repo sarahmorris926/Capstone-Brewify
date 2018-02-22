@@ -19,13 +19,16 @@
             </ul>
 
         </div>
-    </div> <!-- /artistSearch -->
+    </div>
+    <!-- /artistSearch -->
 
     <div class="pairings">
         <h3>Beer Style: </h3>
         <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
         <button ng-click="clickedBeerStyle()">Get Beers!</button>
         <div ng-repeat="item in beerArr" ng-if="item.style.name === beer">{{item.nameDisplay}}</div>
-    </div> <!-- /pairings -->
-    
-</div> <!-- /container -->
+    </div>
+    <!-- /pairings -->
+
+</div>
+<!-- /container -->

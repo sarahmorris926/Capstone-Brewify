@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   background-color: gray;
   height: 100%; }
 
@@ -24,7 +25,8 @@ body {
   display: flex;
   justify-content: space-around; }
 
-.ngShowBeer, .ngShowGenre {
+.ngShowBeer,
+.ngShowGenre {
   color: #ecebe8; }
 
 .searchResults {
