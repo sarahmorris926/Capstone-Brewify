@@ -12,7 +12,9 @@
             <ul>
                 <li ng-repeat="item in results">
                     <a ng-click="clickedArtist(item.genres)">{{item.name}}</a>
-                    <button><a ng-href="{{item.external_urls.spotify}}" target="_blank">Play</a></button>
+                    <a ng-href="{{item.external_urls.spotify}}" target="_blank">
+                        <span class="glyphicon glyphicon-play-circle"></span>
+                    </a>
                 </li>
             </ul>
 
