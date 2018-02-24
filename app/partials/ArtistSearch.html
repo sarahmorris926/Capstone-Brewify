@@ -1,28 +1,34 @@
 <div class="container">
     <div class="artistSearch">
         <h1>Artist Search</h1>
+
+
+        <input type="text" ng-model="searchTerm" class="searchInput">
+        <br>
         <button ng-click="login()">Spotify Login</button>
-
-
-        <input type="text" ng-model="searchTerm">
         <button ng-click="search()">Search!</button>
 
         <div class="searchResults">
             <ul>
                 <li ng-repeat="item in results">
                     <a ng-click="clickedArtist(item.genres)">{{item.name}}</a>
-                    <button><a ng-href="{{item.external_urls.spotify}}" target="_blank">Play</a></button>
+                    <a ng-href="{{item.external_urls.spotify}}" target="_blank">
+                        <span class="glyphicon glyphicon-play-circle"></span>
+                    </a>
                 </li>
             </ul>
 
         </div>
-    </div> <!-- /artistSearch -->
+    </div>
+    <!-- /artistSearch -->
 
     <div class="pairings">
         <h3>Beer Style: </h3>
         <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
         <button ng-click="clickedBeerStyle()">Get Beers!</button>
         <div ng-repeat="item in beerArr" ng-if="item.style.name === beer">{{item.nameDisplay}}</div>
-    </div> <!-- /pairings -->
-    
-</div> <!-- /container -->
+    </div>
+    <!-- /pairings -->
+
+</div>
+<!-- /container -->
