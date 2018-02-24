@@ -57,11 +57,11 @@ angular
     };
 
     $scope.clickedBeerName = () => {
-      console.log("beerName data", Pairings.beerName.data);
-      
+      console.log("hello");
     };
-
   });
+
+
 
 console.log("Welcome to Brewify!");
 console.log(
