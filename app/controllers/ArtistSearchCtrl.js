@@ -55,6 +55,12 @@ angular
         });
       });
     };
+
+    $scope.clickedBeerName = () => {
+      console.log("beerName data", Pairings.beerName.data);
+      
+    };
+
   });
 
 console.log("Welcome to Brewify!");

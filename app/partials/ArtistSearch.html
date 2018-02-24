@@ -26,7 +26,7 @@
     <div class="pairings">
     <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
     <button ng-click="clickedBeerStyle()" ng-show="beer">Get Beers!</button>
-        <div class="pairingsResults" ng-repeat="item in beerArr track by $index" ng-if="item.style.name === beer">{{item.nameDisplay}}</div>
+        <div class="pairingsResults" ng-repeat="item in beerArr track by $index" ng-if="item.style.name === beer" ng-click="clickedBeerName()">{{item.nameDisplay}}</div>
     </div>
     <!-- /pairings -->
 
