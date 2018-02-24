@@ -3,6 +3,8 @@
         <h1>Beer Style Search</h1>
 
         <input type="text" ng-model="searchTerm" class="searchInput">
+        <br>
+        <button ng-click="login()">Spotify Login</button>
         <button ng-click="getBeerStyles()">Search!</button>
 
         <div class="searchResults">
@@ -15,9 +17,10 @@
         </div>
     </div> <!-- /beerSearch -->
 
-    <div class="pairings">
     <h3>Genre: </h3>
+    <div class="pairings">
     <div ng-show="genre" class="ngShowGenre"> {{genre}} </div>
+
     </div> <!-- /pairings -->
     
 </div> <!-- /container -->
