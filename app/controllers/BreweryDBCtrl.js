@@ -1,7 +1,7 @@
 "use strict";
 const angular = require("angular");
 const ngRoute = require("angular-route");
-var startCase = require('lodash.startcase');
+const startCase = require('lodash.startcase');
 
 angular
   .module("BrewifyApp")

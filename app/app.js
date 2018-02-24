@@ -2,7 +2,7 @@
 const angular = require("angular");
 const ngRoute = require("angular-route");
 const angular_spotify = require("angular-spotify");
-var startCase = require('lodash.startcase');
+const startCase = require('lodash.startcase');
 
 angular.module("BrewifyApp", ["ngRoute", "spotify"])
   .config($routeProvider => {
