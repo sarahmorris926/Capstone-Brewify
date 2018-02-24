@@ -29,10 +29,20 @@ body {
 .ngShowGenre {
   color: #ecebe8; }
 
-.searchResults {
+.pairings {
   overflow: scroll;
   width: 300px;
   height: 600px; }
+
+.pairingsResults {
+  color: white;
+  cursor: pointer; }
+
+.searchResults {
+  overflow: scroll;
+  width: 300px;
+  height: 600px;
+  color: white; }
 
 .footer {
   position: absolute;
@@ -64,6 +74,6 @@ body {
   color: lightcoral; }
 
 .footer a:visited {
-  color: darkblue; }
+  color: lightblue; }
 
 /*# sourceMappingURL=main.css.map */

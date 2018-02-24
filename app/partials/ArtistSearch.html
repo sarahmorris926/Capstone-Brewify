@@ -22,11 +22,11 @@
     </div>
     <!-- /artistSearch -->
 
+    <h3>Beer Style: </h3><br>
     <div class="pairings">
-        <h3>Beer Style: </h3>
-        <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
-        <button ng-click="clickedBeerStyle()">Get Beers!</button>
-        <div ng-repeat="item in beerArr" ng-if="item.style.name === beer">{{item.nameDisplay}}</div>
+    <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
+    <button ng-click="clickedBeerStyle()" ng-show="beer">Get Beers!</button>
+        <div class="pairingsResults" ng-repeat="item in beerArr track by $index" ng-if="item.style.name === beer" ng-click"clickedBeerName()"><img src="{{item.labels.icon}}"> - {{item.nameDisplay}}</div>
     </div>
     <!-- /pairings -->
 

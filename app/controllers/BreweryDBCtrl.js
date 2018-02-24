@@ -1,10 +1,17 @@
 "use strict";
 const angular = require("angular");
 const ngRoute = require("angular-route");
+const startCase = require('lodash.startcase');
 
 angular
   .module("BrewifyApp")
-  .controller("BreweryDBCtrl", function($scope, BreweryDB, Spotify, Pairings) {
+  .controller("BreweryDBCtrl", function(
+    $scope,
+    BreweryDB,
+    Spotify,
+    Pairings,
+    Artist
+  ) {
     $scope.login = () => {
       Spotify.login();
     };
@@ -27,7 +34,7 @@ angular
         // beerName is the object from Firebase that has {Genre: Beer Style}
         for (var key in beerName) {
           if (beerStyles === beerName[key]) {
-            $scope.genre = key;
+            $scope.genre = startCase(key);
           }
         }
       });

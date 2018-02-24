@@ -35,10 +35,22 @@ body {
   color: #ecebe8;
 }
 
+.pairings {
+  overflow: scroll;
+  width: 300px;
+  height: 600px;
+}
+
+.pairingsResults {
+  color: white;
+  cursor: pointer;
+}
+
 .searchResults {
   overflow: scroll;
   width: 300px;
   height: 600px;
+  color: white;
 }
 
 .footer {
@@ -58,6 +70,7 @@ body {
 .searchResults li {
   cursor: pointer;
 }
+
 
 // Search Partials
 
@@ -82,5 +95,5 @@ body {
 }
 
 .footer a:visited {
-  color: darkblue;
+  color: lightblue;
 }

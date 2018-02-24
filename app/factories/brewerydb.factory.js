@@ -27,7 +27,7 @@ angular
           .get(
             `https://evening-river-37839.herokuapp.com/api/brewerydb/beers/?key=${
               brewerydbCreds.apiKey
-            }&p=${pageNumber}&styleId=${styleIdNumber}`
+            }&p=${pageNumber}&styleId=${styleIdNumber}&hasLabels=y`
           )
           .then(beers => {
             resolve(beers);
