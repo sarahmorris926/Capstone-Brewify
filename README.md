@@ -17,6 +17,14 @@ $ node server.js
 
 You should be able to go to your local server on your browser and view the project. You will need to click the "Spotify Login" button first, as Spotify requires authentication in order to search for any artists.
 
+## Using
+
+![](/images/SpotifyLogin.png)
+1. Click the "Spotify Login" button in order to begin searching for artists
+2. Type an artist's name and click the "Search" button
+3. Click on the artist you are listening to (if you're unsure if it's the right artist, click the play icon to the right of the name to bring up their artist page on Spotify)
+4. Get your beer type and click "Get Beers" to get specific recommendations! 
+5. Click on the specific beers to get a description (if provided by BreweryDB API)
 ## Built With
 
 * [Spotify API](https://developer.spotify.com/web-api/) - Spotify API for the web
