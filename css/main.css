@@ -38,10 +38,6 @@ body {
   color: #ecebe8;
   text-align: center; }
 
-.ngShowGenre {
-  font-size: 40px;
-  text-align: center; }
-
 h1, h3, h4 {
   text-align: center;
   padding-top: 20px; }
@@ -55,6 +51,10 @@ h1, h3, h4 {
 .searchResults li {
   cursor: pointer; }
 
+.searchInput {
+  width: 600px;
+  align-items: center; }
+
 .artistPairings {
   color: white;
   padding-top: 20px;
@@ -65,19 +65,12 @@ h1, h3, h4 {
   cursor: pointer;
   overflow: scroll;
   width: 400px;
-  height: 800px;
+  height: 650px;
   text-align: left; }
 
-.beerPairings {
-  overflow: scroll;
-  width: 400px;
-  height: 800px;
-  padding-top: 20px;
-  text-align: center; }
-
-.searchInput {
-  width: 600px;
-  align-items: center; }
+.playIcon {
+  width: 16px;
+  height: 16px; }
 
 .artistSearch button {
   align-content: center; }
@@ -85,6 +78,17 @@ h1, h3, h4 {
 .artistSearch {
   margin: 10px;
   padding-top: 20px; }
+
+.beerPairings {
+  overflow: scroll;
+  width: 400px;
+  height: 750px;
+  padding-top: 20px;
+  text-align: center; }
+
+.ngShowGenre {
+  margin-top: 20px;
+  text-align: center; }
 
 .footer span {
   color: #e25555; }

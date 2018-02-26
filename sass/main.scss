@@ -54,11 +54,6 @@ body {
   text-align: center;
 }
 
-.ngShowGenre {
-  font-size: 40px;
-  text-align: center;
-}
-
 h1, h3, h4 {
   text-align: center;
   padding-top: 20px;
@@ -75,6 +70,11 @@ h1, h3, h4 {
   cursor: pointer;
 }
 
+.searchInput {
+  width: 600px;
+  align-items: center;
+}
+
 // artist search only
 
 .artistPairings {
@@ -88,30 +88,14 @@ h1, h3, h4 {
   cursor: pointer;
   overflow: scroll;
   width: 400px;
-  height: 800px;
+  height: 650px;
   text-align: left;
+
 }
 
-// beer search only
-
-.beerPairings {
-  overflow: scroll;
-  width: 400px;
-  height: 800px;
-  padding-top: 20px;
-  text-align: center;
-}
-
-
-
-
-
-
-// Search Partials (both)
-
-.searchInput {
-  width: 600px;
-  align-items: center;
+.playIcon {
+  width: 16px;
+  height: 16px;
 }
 
 .artistSearch button {
@@ -122,6 +106,23 @@ h1, h3, h4 {
   margin: 10px;
   padding-top: 20px;
 }
+
+// beer search only
+
+.beerPairings {
+  overflow: scroll;
+  width: 400px;
+  height: 750px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.ngShowGenre {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
 
 
 
