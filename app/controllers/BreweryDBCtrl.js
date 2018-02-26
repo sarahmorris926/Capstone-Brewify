@@ -1,7 +1,7 @@
 "use strict";
 const angular = require("angular");
 const ngRoute = require("angular-route");
-const startCase = require('lodash.startcase');
+const startCase = require("lodash.startcase");
 
 angular
   .module("BrewifyApp")
@@ -24,8 +24,6 @@ angular
           beerInfo.name = beer.name;
           return beerInfo;
         });
-
-        console.log("beerNames", $scope.beerNames);
       });
 
     $scope.clickedBeer = beerStyles => {
