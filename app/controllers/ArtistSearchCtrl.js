@@ -58,6 +58,7 @@ angular
 
     $scope.clickedBeerName = () => {
       console.log('clicked');
+      
     };
   });
 

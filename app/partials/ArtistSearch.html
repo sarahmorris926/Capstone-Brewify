@@ -12,9 +12,7 @@
             <ul>
                 <li ng-repeat="item in results">
                     <a ng-click="clickedArtist(item.genres)">{{item.name}}</a>
-                    <a ng-href="{{item.external_urls.spotify}}" target="_blank">
-                        <span class="glyphicon glyphicon-play-circle"></span>
-                    </a>
+                    <a ng-href="{{item.external_urls.spotify}}" target="_blank"><img class="playIcon" src="../../node_modules/open-iconic/svg/play-circle.svg"></a>
                 </li>
             </ul>
 
@@ -22,11 +20,14 @@
     </div>
     <!-- /artistSearch -->
 
-    <h3>Beer Style: </h3><br>
-    <div class="pairings">
-    <div ng-show="beer" class="ngShowBeer"> {{beer}} </div>
-    <button ng-click="clickedBeerStyle()" ng-show="beer">Get Beers!</button>
-        <div class="pairingsResults" ng-repeat="item in beerArr track by $index" ng-if="item.style.name === beer" ng-click"clickedBeerName()"><img src="{{item.labels.icon}}"> - {{item.nameDisplay}}</div>
+    <h3>Beer: </h3>
+    <div class="artistPairings">
+        <h4><div ng-show="beer" class="ngShowBeer"> {{beer}} </div></h4>
+        <button ng-click="clickedBeerStyle()" ng-show="beer">Get Beers!</button>
+        <div class="artistPairingsBox">
+            <div ng-repeat="item in beerArr track by $index" ng-if="item.style.name === beer" ng-click="clickedBeerName()">
+                <img src="{{item.labels.icon}}"> - {{item.nameDisplay}}</div>
+        </div> <!-- /artistPairingsBox -->
     </div>
     <!-- /pairings -->
 

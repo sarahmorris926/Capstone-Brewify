@@ -26,13 +26,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web" rel="stylesheet">
+  <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
 </head>
 
 <body ng-app="BrewifyApp">
 
   <div ng-include=" 'app/partials/Nav.html' "></div>
-  <div ng-view></div>
+  <div ng-view class="bodyStuff"></div>
   <div ng-include=" 'app/partials/Footer.html' "></div>
 
 </body>

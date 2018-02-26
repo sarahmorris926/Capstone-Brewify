@@ -1,7 +1,7 @@
 html,
 body {
-  background-color: gray;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Open Sans', sans-serif; }
 
 body {
   position: relative;
@@ -10,7 +10,11 @@ body {
   min-height: 100%; }
 
 .title {
-  color: #84bd00; }
+  color: #1ed760;
+  font-family: 'Titillium Web', sans-serif; }
+
+.navbar {
+  font-family: 'Titillium Web', sans-serif; }
 
 .logo {
   display: block;
@@ -25,24 +29,69 @@ body {
   display: flex;
   justify-content: space-around; }
 
+.bodyStuff {
+  background: linear-gradient(to top right, darkslategray, #1ed760);
+  height: 100%; }
+
 .ngShowBeer,
 .ngShowGenre {
-  color: #ecebe8; }
+  color: #ecebe8;
+  text-align: center; }
 
-.pairings {
-  overflow: scroll;
-  width: 300px;
-  height: 600px; }
-
-.pairingsResults {
-  color: white;
-  cursor: pointer; }
+h1, h3, h4 {
+  text-align: center;
+  padding-top: 20px; }
 
 .searchResults {
   overflow: scroll;
   width: 300px;
   height: 600px;
   color: white; }
+
+.searchResults li {
+  cursor: pointer; }
+
+.searchInput {
+  width: 600px;
+  align-items: center; }
+
+.artistPairings {
+  color: white;
+  padding-top: 20px;
+  text-align: center; }
+
+.artistPairingsBox {
+  color: white;
+  cursor: pointer;
+  overflow: scroll;
+  width: 400px;
+  height: 650px;
+  text-align: left; }
+
+.playIcon {
+  width: 16px;
+  height: 16px; }
+
+.artistSearch button {
+  align-content: center; }
+
+.artistSearch {
+  margin: 10px;
+  padding-top: 20px; }
+
+.beerPairings {
+  overflow: scroll;
+  width: 400px;
+  height: 750px;
+  padding-top: 20px;
+  text-align: center; }
+
+.ngShowGenre {
+  margin-top: 20px;
+  text-align: center; }
+
+.footer span {
+  color: #e25555; }
 
 .footer {
   position: absolute;
@@ -52,19 +101,6 @@ body {
   padding: 1rem;
   background-color: #efefef;
   text-align: center; }
-
-.footer span {
-  color: #e25555; }
-
-.searchResults li {
-  cursor: pointer; }
-
-.searchInput {
-  width: 600px;
-  align-items: center; }
-
-.artistSearch button {
-  align-content: center; }
 
 .footer a:link {
   text-decoration: none;
