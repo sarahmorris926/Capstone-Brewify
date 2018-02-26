@@ -17,6 +17,7 @@ body {
   font-family: "Titillium Web", sans-serif; }
 
 .navbar a:hover {
+  transition: .5s;
   color: whitesmoke; }
 
 .logo {
