@@ -23,6 +23,9 @@ You should be able to go to your local server on your browser and view the proje
 * [Angular-Spotify](https://github.com/eddiemoore/angular-spotify) - Wrapper for the Spotify API
 * [Firebase](https://firebase.google.com) - Database for genre/beer style pairings
 * [BreweryDB API](www.brewerydb.com/developers/docs) - BreweryDB API for beer styles and beer names
+* [Lodash](https://lodash.com/) - Lodash "startCase" feature for search results
+* [Heroku](https://www.heroku.com/) - Cloud application service used in this app to create a backend server in order to get data from BreweryDB API
+* [Bootstrap](https://getbootstrap.com/) - Used for styling elements on the page
 
 ## License
 
