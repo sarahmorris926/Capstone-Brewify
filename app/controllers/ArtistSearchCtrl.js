@@ -49,20 +49,16 @@ angular
         }
         $q.all(promArr).then(beerName => {
           beerName.forEach(beerArr => {
-            console.log(beerArr.data.data);
             $scope.beerArr = $scope.beerArr.concat(beerArr.data.data);
           });
         });
       });
     };
 
-    $scope.clickedBeerName = (id) => {
-      console.log('clicked');
+    $scope.clickedBeerName = id => {
       $scope.activeID = id;
     };
   });
-
-
 
 console.log("Welcome to Brewify!");
 console.log(

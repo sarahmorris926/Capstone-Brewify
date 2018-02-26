@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 body {
   position: relative;
@@ -11,10 +11,13 @@ body {
 
 .title {
   color: #1ed760;
-  font-family: 'Titillium Web', sans-serif; }
+  font-family: "Titillium Web", sans-serif; }
 
 .navbar {
-  font-family: 'Titillium Web', sans-serif; }
+  font-family: "Titillium Web", sans-serif; }
+
+.navbar a:hover {
+  color: whitesmoke; }
 
 .logo {
   display: block;
@@ -38,7 +41,9 @@ body {
   color: #ecebe8;
   text-align: center; }
 
-h1, h3, h4 {
+h1,
+h3,
+h4 {
   text-align: center;
   padding-top: 20px; }
 
@@ -49,16 +54,24 @@ h1, h3, h4 {
   color: white; }
 
 .searchResults li {
-  cursor: pointer; }
+  cursor: pointer;
+  list-style-type: none;
+  padding: 5px;
+  align-content: center; }
 
 .searchInput {
   width: 600px;
   align-items: center; }
 
+.container button {
+  margin-top: 10px;
+  align-content: center; }
+
 .artistPairings {
   color: white;
   padding-top: 20px;
-  text-align: center; }
+  text-align: center;
+  height: 20px; }
 
 .artistPairingsBox {
   color: white;
@@ -74,6 +87,12 @@ h1, h3, h4 {
 
 .artistSearch button {
   align-content: center; }
+
+.beerDesc {
+  color: #ededed; }
+
+#beerStats {
+  padding-bottom: 10px; }
 
 .beerPairings {
   overflow: scroll;
