@@ -56,9 +56,9 @@ angular
       });
     };
 
-    $scope.clickedBeerName = () => {
+    $scope.clickedBeerName = (id) => {
       console.log('clicked');
-      
+      $scope.activeID = id;
     };
   });
 
