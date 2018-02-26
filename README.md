@@ -1,4 +1,4 @@
-# Capstone-Brewify
+# Nashville Software School, Front End Capstone: Brewify
 This is my front-end capstone project for Nashville Software School. The app allows the user to search for an artist they're listening to, and get a few beer recommendations to pair with their music. It also allows for opposite search (search for the beer you're drinking, and get back a few artist recommendations).
 
 ## Getting Started
