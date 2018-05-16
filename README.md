@@ -9,7 +9,7 @@ First, you'll need to clone the project to your machine:
 $ git clone https://github.com/sarahmorris926/Capstone-Brewify.git
 ```
 
-Next, you need to run "npm install" in your terminal and start two servers: one as a local server, and one node server. The Node server code can be found (here)[https://github.com/sarahmorris926/capstone-proxy-server]. You will need to clone it or fork it and `cd` into the file you put it in. The Node server can be started using this command in the terminal: 
+Next, you need to run "npm install" in your terminal and start two servers: one as a local server, and one node server. The Node server code can be found [here](https://github.com/sarahmorris926/capstone-proxy-server). You will need to clone it or fork it and `cd` into the file you put it in. The Node server can be started using this command in the terminal: 
 
 ```
 $ node server.js
